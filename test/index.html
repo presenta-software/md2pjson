@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to PRESENTA json</title>
+    <script src="../dist/md2pjson.min.js"></script>
+</head>
+<body>
+    <script>
+        fetch('test.md')
+            .then(res => res.text())
+            .then(res => {
+                let json = md2pjson(res)
+                console.log(json)
+            })
+    </script>
+</body>
+</html>
