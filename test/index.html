@@ -11,8 +11,14 @@
         fetch('test.md')
             .then(res => res.text())
             .then(res => {
-                let json = md2pjson(res)
+                let json = md2pjson.parse(res)
                 console.log(json)
+
+                const index = md2pjson.findIndex(res, 7)
+                console.log(index)
+
+                const range = md2pjson.findRange(res, 1)
+                console.log(range)
             })
     </script>
 </body>
