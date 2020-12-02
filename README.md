@@ -11,3 +11,9 @@ Run the watcher:
 and the local webserver
 
     npm run test
+
+## Licence
+
+This plugin is released under the [3-Clause BSD license](LICENSE).
+
+Copyright © 2020 Fabio Franchino, [https://fabiofranchino.com](https://fabiofranchino.com)
