@@ -2,6 +2,7 @@ import yaml from 'yaml'
 const parser = new DOMParser()
 
 var blocks = [
+  'image',
   'youtube',
   'svg',
   'video',
