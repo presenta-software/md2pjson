@@ -3,6 +3,8 @@ const parser = new DOMParser()
 
 var blocks = [
   'image',
+  'text',
+  'embed',
   'youtube',
   'svg',
   'video',
@@ -27,7 +29,7 @@ export default src => {
         const b = yaml.parse(code.innerHTML)
         b.type = type
         blocksRes.push(b)
-        nsrc = nsrc.replace(el.outerHTML, '')
+        nsrc = nsrc.replace(el.innerHTML, '')
       }
     })
     return { blocks: blocksRes, src: nsrc }
