@@ -1,6 +1,6 @@
 
 export default html => {
-  let block = {}
+  let block = null
 
   const el = document.createElement('div')
   el.innerHTML = html

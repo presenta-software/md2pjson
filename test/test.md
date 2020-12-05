@@ -10,6 +10,12 @@ some text
 
 ---
 
+```embed
+url: hey
+```
+
+---
+
 only text
 
 ---

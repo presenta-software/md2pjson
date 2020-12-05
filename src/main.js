@@ -34,7 +34,8 @@ export default str => {
     // parse the src text to create blocks
     const parts = blkdef.src.split('\n<p>–</p>\n')
     parts.forEach(s => {
-      scene.blocks.push(blockFromSrc(s))
+      const blk = blockFromSrc(s)
+      if (blk) scene.blocks.push(blk)
     })
 
     // add additional blocks from definition, if any
