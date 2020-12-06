@@ -2,6 +2,7 @@ import marked from 'marked'
 import directives from './directives.js'
 import blockFromSrc from './blockFromSrc'
 import blockFromDef from './blockFromDef'
+import defaults from './defaults'
 
 marked.setOptions({
   gfm: true,
@@ -13,7 +14,7 @@ export default str => {
     scenes: []
   }
 
-  const scenes = str.split('\n---\n')
+  const scenes = str.split('\n' + defaults.sceneSeparator + '\n')
 
   const arr = []
   scenes.forEach(d => {
@@ -32,7 +33,7 @@ export default str => {
     const blkdef = blockFromDef(srcHtml)
 
     // parse the src text to create blocks
-    const parts = blkdef.src.split('\n<p>–</p>\n')
+    const parts = blkdef.src.split('\n<p>' + defaults.fragmentSeparator + '</p>\n')
     parts.forEach(s => {
       const blk = blockFromSrc(s)
       if (blk) scene.blocks.push(blk)

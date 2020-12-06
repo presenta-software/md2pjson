@@ -1,3 +1,5 @@
+import defaults from './defaults'
+
 const findIndex = (code, line) => {
   let sceneNum = 0
   const lines = code.split('\n')
@@ -6,7 +8,7 @@ const findIndex = (code, line) => {
     if (line === j) {
       return sceneNum
     }
-    if (l && l.indexOf('---') === 0) sceneNum++
+    if (l && l.indexOf(defaults.sceneSeparator) === 0) sceneNum++
   }
   return sceneNum
 }
@@ -19,7 +21,7 @@ const findRange = (code, index) => {
   for (var j = 0; j <= lines.length; j++) {
     const l = lines[j]
 
-    if (l && l.indexOf('---') === 0) {
+    if (l && l.indexOf(defaults.sceneSeparator) === 0) {
       sceneNum++
     }
 
@@ -28,7 +30,7 @@ const findRange = (code, index) => {
       return { start, end }
     }
 
-    if (l && l.indexOf('---') === 0) {
+    if (l && l.indexOf(defaults.sceneSeparator) === 0) {
       start = j + 1
     }
   }

@@ -11,6 +11,9 @@
         fetch('test.md')
             .then(res => res.text())
             .then(res => {
+
+                //md2pjson.setting.sceneSeparator = '$$'
+
                 let json = md2pjson.parse(res)
                 console.log(json)
 
