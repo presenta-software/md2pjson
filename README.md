@@ -1,8 +1,8 @@
-# Markdown to PRESENTA json
+# Markdown to PRESENTA JSON
 
 This library converts from `markdown` to an opinionated [PRESENTA](https://github.com/presenta-software/presenta-lib) config object.
 
-A quick example [here](https://codepen.io/abusedmedia/pen/WNGwMrR) together with [PRESENTA Lib](https://github.com/presenta-software/presenta-lib) while waiting for the full documentation.
+A quick example [here](https://codepen.io/abusedmedia/pen/WNGwMrR).
 
 ## Usage
 
@@ -33,7 +33,30 @@ md2pjson.setting.sceneSeparator = '---'
 md2pjson.setting.fragmentSeparator = '–'
 ```
 
+The library parses the HTML comments as scene and block properties:
 
+```markdown
+<!--
+textVar: section
+colorBack: red
+-->
+
+# hello
+
+```
+
+Also, you can create blocks using this notation:
+
+```markdown
+# hello
+
+```youtube
+url: YTcodeID
+```  
+
+```
+
+The above chunk creates a scene with two blocks, the first one is a `text` block, the last one a `youtube` block.
 
 ## Development
 
