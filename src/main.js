@@ -45,6 +45,11 @@ export default str => {
     // check if there's only one block
     const oneBlock = scene.blocks.length === 1 ? scene.blocks[0] : null
 
+    // set the colorVar to scene the same as the first block
+    if (oneBlock) {
+      if (oneBlock.colorVar) scene.colorVar = oneBlock.colorVar || null
+    }
+
     // parse directives and set into the scene
     const dir = directives(text)
     dir.forEach(d => {
