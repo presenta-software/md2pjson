@@ -2,6 +2,7 @@ import marked from 'marked'
 import directives from './directives.js'
 import blockFromSrc from './blockFromSrc'
 import blockFromDef from './blockFromDef'
+import fm from 'front-matter'
 import defaults from './defaults'
 
 marked.setOptions({
@@ -9,10 +10,19 @@ marked.setOptions({
   breaks: true
 })
 
-export default str => {
+export default ostr => {
   const project = {
     scenes: []
   }
+
+  const front = fm(ostr)
+  const attr = front.attributes
+  const str = front.body
+
+  for (const k in attr) {
+    project[k] = attr[k]
+  }
+
 
   const scenes = str.split('\n' + defaults.sceneSeparator + '\n')
 
