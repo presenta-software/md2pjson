@@ -22,7 +22,7 @@ export default html => {
     url = hasImage.getAttribute('src')
     alt = hasImage.getAttribute('alt')
     onlyImage = (!hasHeading && hasText.innerHTML === hasImage.outerHTML)
-    hasText = (hasText.innerHTML !== hasImage.outerHTML)
+    hasText = (hasText && hasText.innerHTML !== hasImage.outerHTML)
   }
   const onlyTable = (hasTable && !hasHeading && hasText.innerHTML === hasTable.innerHTML)
 
