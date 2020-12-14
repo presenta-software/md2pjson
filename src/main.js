@@ -51,12 +51,6 @@ export default ostr => {
     // add additional blocks from definition, if any
     scene.blocks = scene.blocks.concat(blkdef.blocks)
 
-    // add scene level props if any
-    const prp = blkdef.props
-    for (const k in prp) {
-      scene[k] = prp[k]
-    }
-
     // check if there's only one block
     const oneBlock = scene.blocks.length === 1 ? scene.blocks[0] : null
 
