@@ -17,11 +17,14 @@
                 let json = md2pjson.parse(res)
                 console.log(json)
 
-                const index = md2pjson.findIndex(res, 7)
-                console.log(index)
+                console.log(md2pjson.findIndex(res, 2))
+                console.log(md2pjson.findIndex(res, 6))
+                console.log(md2pjson.findIndex(res, 22))
+                console.log(md2pjson.findIndex(res, 30))
 
-                const range = md2pjson.findRange(res, 1)
-                console.log(range)
+                console.log(md2pjson.findRange(res, 0))
+                console.log(md2pjson.findRange(res, 1))
+                console.log(md2pjson.findRange(res, 2))
             })
     </script>
 </body>
