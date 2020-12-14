@@ -38,9 +38,9 @@ export default src => {
             const b = yaml.parse(code.innerHTML)
             b.type = type
             blocksRes.push(b)
-            nsrc = nsrc.replace(el.innerHTML, '')
             break
         }
+        nsrc = nsrc.replace(el.innerHTML, '')
       }
     })
     return { blocks: blocksRes, src: nsrc, props }
