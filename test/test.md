@@ -6,15 +6,25 @@ fonts: blabla
 
 # title
 
-```notes
-A presenter note
-```
+<!--
+notes: A presenter note
+-->
 
 ---
 
 ### subtitle
 
 some text
+
+```js
+var a = 1;
+```
+
+---
+
+```
+only code
+```
 
 ---
 

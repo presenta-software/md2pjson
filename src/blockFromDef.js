@@ -23,13 +23,16 @@ export default src => {
   if (precode.length > 0) {
     preArr.forEach(el => {
       const code = el.querySelector('code')
-      const type = code.getAttribute('class').replace('language-', '')
-      const isBlock = blocks.indexOf(type) >= 0
-      if (isBlock) {
-        const b = yaml.parse(code.innerHTML)
-        b.type = type
-        blocksRes.push(b)
-        nsrc = nsrc.replace(el.innerHTML, '')
+      const cls = code.getAttribute('class')
+      if (cls) {
+        const type = cls.replace('language-', '')
+        const isBlock = blocks.indexOf(type) >= 0
+        if (isBlock) {
+          const b = yaml.parse(code.innerHTML)
+          b.type = type
+          blocksRes.push(b)
+          nsrc = nsrc.replace(el.innerHTML, '')
+        }
       }
     })
     return { blocks: blocksRes, src: nsrc }
