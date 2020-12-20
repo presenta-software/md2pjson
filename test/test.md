@@ -7,7 +7,7 @@ fonts: blabla
 
 
 
-# title
+# title :heart:
 
 <!--
 notes: A presenter note
@@ -17,7 +17,7 @@ notes: A presenter note
 
 ### subtitle
 
-some text
+some text :coffee:
 
 ```js
 var a = 1;
@@ -37,7 +37,7 @@ url: hey
 
 ---
 
-only text
+only text :pizza:
 
 ---
 

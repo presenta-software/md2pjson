@@ -4,6 +4,7 @@ import blockFromSrc from './blockFromSrc'
 import blockFromDef from './blockFromDef'
 import fm from 'front-matter'
 import defaults from './defaults'
+import emoji from 'node-emoji'
 
 marked.setOptions({
   gfm: true,
@@ -15,7 +16,7 @@ export default ostr => {
     scenes: []
   }
 
-  const front = fm(ostr)
+  const front = fm(emoji.emojify(ostr))
   const attr = front.attributes
   const str = front.body
 
