@@ -41,7 +41,7 @@ textVar: section
 colorBack: red
 -->
 
-# hello
+# hello 
 
 ```
 
@@ -57,6 +57,12 @@ url: YTcodeID
 ```
 
 The above chunk creates a scene with two blocks, the first one is a `text` block, the last one a `youtube` block.
+
+This library understands a [subset](https://raw.githubusercontent.com/omnidan/node-emoji/master/lib/emoji.json) of [emoji shortcodes](https://emojipedia.org/shortcodes/), such as:
+
+```markdown
+# Hello! :heart:
+```
 
 ## Development
 
