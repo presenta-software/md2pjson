@@ -5,6 +5,7 @@ import blockFromDef from './blockFromDef'
 import fm from 'front-matter'
 import defaults from './defaults'
 import emoji from 'node-emoji'
+import { colors, fonts } from './thememap'
 
 marked.setOptions({
   gfm: true,
@@ -15,6 +16,7 @@ export default ostr => {
   const project = {
     scenes: []
   }
+  const arr = []
 
   const front = fm(emoji.emojify(ostr))
   const attr = front.attributes
@@ -24,9 +26,11 @@ export default ostr => {
     project[k] = attr[k]
   }
 
+  if (project.colors) project.colors = colors[project.colors]
+  if (project.fonts) project.fonts = fonts[project.fonts]
+
   const scenes = str.split('\n' + defaults.sceneSeparator + '\n')
 
-  const arr = []
   scenes.forEach(d => {
     // create the scene
     const scene = {

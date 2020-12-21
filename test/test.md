@@ -1,10 +1,7 @@
 ---
-title: aaa
-colors: adele
-fonts: blabla
+colors: one
+fonts: six
 ---
-
-
 
 
 # title :heart:
