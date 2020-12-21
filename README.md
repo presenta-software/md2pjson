@@ -1,5 +1,7 @@
 # Markdown to PRESENTA JSON
 
+![](https://img.shields.io/npm/v/@presenta/md2pjson)
+
 This library converts from `markdown` to an opinionated [PRESENTA](https://github.com/presenta-software/presenta-lib) config object.
 
 A quick example [here](https://codepen.io/abusedmedia/pen/WNGwMrR).
