@@ -1,15 +1,16 @@
 const colors = {
-  one: 'blue',
-  two: 'red',
-  three: 'adele',
-  four: 'belle',
-  five: 'cati',
-  six: 'dania',
-  seven: 'elane',
-  height: 'flo',
-  nine: 'gina',
-  ten: 'hedy',
-  eleven: 'irma'
+  one: 'bn',
+  two: 'blue',
+  three: 'red',
+  four: 'adele',
+  five: 'belle',
+  six: 'cati',
+  seven: 'dania',
+  height: 'elane',
+  nine: 'flo',
+  ten: 'gina',
+  eleven: 'hedy',
+  twelve: 'irma'
 }
 
 const fonts = {
