@@ -31,6 +31,7 @@ export default src => {
           const b = yaml.parse(code.innerHTML)
           b.type = type
           blocksRes.push(b)
+          nsrc = nsrc.replace(/&quot;/mig, '"')
           nsrc = nsrc.replace(el.innerHTML, '')
         }
       }

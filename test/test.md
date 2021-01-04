@@ -38,3 +38,6 @@ only text :pizza:
 
 ---
 
+```fitty
+text: "Issue here"
+```
