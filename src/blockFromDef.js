@@ -10,7 +10,9 @@ var blocks = [
   'video',
   'vegalite',
   'chartjs',
-  'fitty'
+  'fitty',
+  'flowchartjs',
+  'modelviewer'
 ]
 
 export default src => {

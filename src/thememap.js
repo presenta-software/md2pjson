@@ -6,7 +6,7 @@ const colors = {
   five: 'belle',
   six: 'cati',
   seven: 'dania',
-  height: 'elane',
+  eight: 'elane',
   nine: 'flo',
   ten: 'gina',
   eleven: 'hedy',
@@ -21,7 +21,7 @@ const fonts = {
   five: 'finch',
   six: 'flow',
   seven: 'goose',
-  height: 'heron'
+  eight: 'heron'
 }
 
 export { colors, fonts }
