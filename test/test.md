@@ -1,6 +1,8 @@
 ---
 colors: one
 fonts: six
+plugins:
+  - url: https://unpkg.com/@presenta/block-youtube
 ---
 
 
