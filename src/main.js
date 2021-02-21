@@ -21,7 +21,9 @@ export default ostr => {
 
   const front = fm(emoji.emojify(ostr))
   const attr = front.attributes
-  const str = front.body
+  var str = front.body
+
+  str = str.replace(/\r\n?/g, '\n')
 
   for (const k in attr) {
     project[k] = attr[k]
