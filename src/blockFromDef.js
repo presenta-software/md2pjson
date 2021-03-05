@@ -28,10 +28,13 @@ export default src => {
       const cls = code.getAttribute('class')
       if (cls) {
         const type = cls.replace('language-', '')
-        const isBlock = blocks.indexOf(type) >= 0
-        if (isBlock) {
-          const b = yaml.parse(code.innerHTML)
-          b.type = type
+        const isBlockLegacy = blocks.indexOf(type) >= 0
+
+        const isBlock = type.indexOf('_') === 0
+        if (isBlockLegacy || isBlock) {
+          const btype = isBlock ? type.substr(1) : type
+          const b = code.innerHTML ? yaml.parse(code.innerHTML) : {}
+          b.type = btype
           blocksRes.push(b)
           nsrc = nsrc.replace(/&quot;/mig, '"')
           nsrc = nsrc.replace(el.innerHTML, '')
