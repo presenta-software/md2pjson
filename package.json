@@ -1,6 +1,6 @@
 {
   "name": "@presenta/md2pjson",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "",
   "main": "index.js",
   "unpkg": "dist/md2pjson.min.js",
