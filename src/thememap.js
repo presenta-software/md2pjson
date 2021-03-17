@@ -10,7 +10,10 @@ const colors = {
   nine: 'flo',
   ten: 'gina',
   eleven: 'hedy',
-  twelve: 'irma'
+  twelve: 'irma',
+  thirteen: 'grad1',
+  fourteen: 'grad2',
+  fifteen: 'grad3'
 }
 
 const fonts = {
@@ -21,7 +24,9 @@ const fonts = {
   five: 'finch',
   six: 'flow',
   seven: 'goose',
-  eight: 'heron'
+  eight: 'heron',
+  nine: 'spark',
+  ten: 'rough'
 }
 
 export { colors, fonts }
