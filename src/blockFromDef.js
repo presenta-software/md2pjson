@@ -1,5 +1,4 @@
 import yaml from 'yaml'
-const parser = new DOMParser()
 
 var blocks = [
   'image',
@@ -16,6 +15,7 @@ var blocks = [
 ]
 
 export default src => {
+  const parser = new DOMParser()
   const dom = parser.parseFromString(src, 'text/html').body
   const pre = dom.querySelectorAll('pre')
   const precode = dom.querySelectorAll('pre > code')
