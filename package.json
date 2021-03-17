@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "front-matter": "^4.0.2",
-    "marked": "^1.2.5",
+    "marked": "^2.0.1",
     "md5": "^2.3.0",
     "node-emoji": "^1.10.0",
     "yaml": "^1.10.0"
